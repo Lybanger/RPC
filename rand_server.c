@@ -14,7 +14,10 @@ inicializa_random_1_svc(long *argp, struct svc_req *rqstp)
 	/*
 	 * insert server code here
 	 */
-
+	result=argp->misemilla;
+	result=(long)atoi(result);
+	srandom(result);
+	printf("numero random: %d",random());
 	return (void *) &result;
 }
 
@@ -26,6 +29,9 @@ obtiene_siguiente_random_1_svc(void *argp, struct svc_req *rqstp)
 	/*
 	 * insert server code here
 	 */
-
+	result=argp->misemilla);
+	result=(long)atoi(result);
+	srandom(result);
+	printf("numero random: %d",random());
 	return &result;
 }
